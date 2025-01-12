@@ -31,6 +31,7 @@ master peers = do
   forM_ ps $ \pid -> do
     say $ printf "ping %s" (show pid)
     send pid (Ping mypid)
+  waitForPongs ps
   say "All pongs successfully received"
   terminate
 
