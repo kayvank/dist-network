@@ -1,0 +1,32 @@
+cabal-version:   3.0
+name:            ping-pong-exe
+version:         0.1.0.0
+
+-- synopsis:
+-- description:
+license:         Apache-2.0
+license-file:    LICENSE
+
+-- author:
+-- maintainer:
+-- copyright:
+build-type:      Simple
+extra-doc-files: CHANGELOG.md
+
+-- extra-source-files:
+
+common base
+  build-depends: base >=4.9 && <5
+
+common project-config
+  default-language: Haskell2010
+
+executable ping-pong-exe
+  import:           base, project-config
+  main-is:          Main.hs
+
+  -- other-modules:
+  -- other-extensions:
+  build-depends:    ping-pong-local
+  hs-source-dirs:   app
+  default-language: Haskell2010
