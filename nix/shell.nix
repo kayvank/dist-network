@@ -23,6 +23,7 @@ cabalProject:
 
   shellHook = ''
     export CABAL_DIR=$(pwd)/.CABAL_DIR
+    export PATH=$PATH:$CABAL_DIR/bin
     set -o vi
   '';
 

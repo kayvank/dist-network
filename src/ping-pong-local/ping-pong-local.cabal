@@ -1,17 +1,14 @@
-cabal-version:   3.0
-name:            ping-pong-local
-version:         0.1.0.0
+cabal-version: 3.0
+name:          ping-pong-local
+version:       0.1.0.0
 
 -- synopsis:
 -- description:
-license:         Apache-2.0
-license-file:    LICENSE
-author:          kayvan
-maintainer:      kayvan@q2io.com
+author:        kayvan
+maintainer:    kayvan@q2io.com
 
 -- copyright:
-build-type:      Simple
-extra-doc-files: CHANGELOG.md
+build-type:    Simple
 
 -- extra-source-files:
 

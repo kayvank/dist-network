@@ -1,6 +1,6 @@
 module Main where
 
-import Master (runMaster)
+import Network.Master (runMaster)
 
 main :: IO ()
 main = runMaster

@@ -1,7 +1,7 @@
 {-# LANGUAGE LambdaCase #-}
 {-# LANGUAGE TemplateHaskell #-}
 
-module Master where
+module Network.Master where
 
 import Control.Distributed.Process
   ( NodeId

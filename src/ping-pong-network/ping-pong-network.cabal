@@ -1,17 +1,14 @@
-cabal-version:   3.0
-name:            ping-pong-network
-version:         0.1.0.0
+cabal-version: 3.0
+name:          ping-pong-network
+version:       0.1.0.0
 
 -- synopsis:
 -- description:
-license:         Apache-2.0
-license-file:    LICENSE
-author:          kayvan
-maintainer:      kayvan@q2io.com
+author:        kayvan
+maintainer:    kayvan@q2io.com
 
 -- copyright:
-build-type:      Simple
-extra-doc-files: CHANGELOG.md
+build-type:    Simple
 
 -- extra-source-files:
 
@@ -49,7 +46,7 @@ common project-config
 
 library
   import:           base, project-config
-  exposed-modules:  Master
+  exposed-modules:  Network.Master
 
   -- other-modules:
   -- other-extensions:
