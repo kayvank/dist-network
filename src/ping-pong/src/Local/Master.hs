@@ -1,6 +1,6 @@
 {-# LANGUAGE TemplateHaskell #-}
 
-module Master where
+module Local.Master where
 
 import Control.Distributed.Process
   ( Process
@@ -15,8 +15,7 @@ import Control.Distributed.Process.Internal.Closure.TH (mkStaticClosure)
 import Control.Distributed.Process.Internal.Primitives (getSelfPid)
 import DistribUtils (distribMain)
 import Message (Message (..))
-import PingServer (pingServer, pingServer__static)
-import PingServer qualified as Main
+import PingServer (pingServer, pingServer__static, __remoteTable)
 import Text.Printf (printf)
 
 master :: Process ()
@@ -32,4 +31,4 @@ master = do
   terminate
 
 runMaster :: IO ()
-runMaster = distribMain (const master) Main.__remoteTable
+runMaster = distribMain (const master) __remoteTable

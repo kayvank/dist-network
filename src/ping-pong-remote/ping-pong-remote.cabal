@@ -1,5 +1,5 @@
 cabal-version: 3.0
-name:          ping-pong-network
+name:          ping-pong-remote
 version:       0.1.0.0
 
 -- synopsis:
@@ -43,13 +43,11 @@ common project-config
     -Wall -Wnoncanonical-monad-instances -Wunused-packages
     -Wincomplete-uni-patterns -Wincomplete-record-updates
     -Wredundant-constraints -Widentities -Wmissing-import-lists
+    -ddump-splices
 
 library
   import:           base, project-config
-  exposed-modules:  Network.Master
-
-  -- other-modules:
-  -- other-extensions:
+  exposed-modules:  Remote.Master
   build-depends:
     , aeson
     , async

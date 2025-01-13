@@ -1,20 +1,13 @@
-{-# LANGUAGE TemplateHaskell #-}
-
 module DistribUtils (distribMain) where
 
-import Control.Distributed.Process (NodeId, Process, RemoteTable)
+import Control.Distributed.Process -- (NodeId, Process)
 import Control.Distributed.Process.Backend.SimpleLocalnet
   ( initializeBackend
   , startMaster
   , startSlave
   )
-import Control.Distributed.Process.Closure ()
 import Control.Distributed.Process.Node (initRemoteTable)
-
-import Network.Socket ()
 import System.Environment (getArgs)
-
-import Language.Haskell.TH ()
 
 distribMain :: ([NodeId] -> Process ()) -> (RemoteTable -> RemoteTable) -> IO ()
 distribMain master frtable = do
